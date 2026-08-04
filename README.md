@@ -1,18 +1,26 @@
-# mcp-coinmarketcap
+# @pipeworx/coinmarketcap
 
-CoinMarketCap MCP — crypto prices, market cap, rankings
+CoinMarketCap MCP — crypto prices, market cap, rankings. Free Basic plan: 10k credits/month.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 673+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
-| Tool | Description |
-|------|-------------|
-| `listings_latest` | Top-ranked coins by market cap. |
-| `metadata` | Static coin metadata — logo, description, website, social links. |
-| `global_metrics` | Total market cap, 24h volume, BTC/ETH dominance, active cryptos. |
-| `categories` | List meta-categories (DeFi, L1, NFTs, Memes, …). |
-| `category` | Coins belonging to a specific category. |
+- `quotes(symbol?, id?, convert?)` — latest price/volume/cap for one or more coins
+- `listings_latest(start?, limit?, sort?, convert?)` — top-ranked coins
+- `metadata(symbol?, id?)` — coin profile, logo, social links
+- `global_metrics(convert?)` — total market cap, BTC/ETH dominance, active cryptos
+- `categories(start?, limit?)` — meta-categories (DeFi, L1, NFTs, etc.)
+- `category(id, convert?)` — coins within a category
+
+## Auth
+
+- **Platform key:** gateway env `PLATFORM_CMC_KEY`
+- **BYO:** `?_apiKey=<key>` after registering at https://pro.coinmarketcap.com/signup
+
+## Data source
+
+`https://pro-api.coinmarketcap.com/v1/` and `/v2/` — `X-CMC_PRO_API_KEY` header.
 
 ## Quick Start
 
@@ -28,7 +36,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 673+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -52,7 +60,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
