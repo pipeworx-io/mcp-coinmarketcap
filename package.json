@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-coinmarketcap",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "CoinMarketCap MCP — crypto prices, market cap, rankings",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-cdd147f20ca33c60645e9fb84294b95e49803e6104e0d13e8b2d96291d846fea",
-    "sourceCommit": "60f04b68c347e970c6be94a53439d1364061fc06"
+    "sourceHash": "v1-b0522ef29393043ab358defc85a8ae8a9bbde35e3a7bdd06cfaf4ce2319b8dfc",
+    "sourceCommit": "5b29c2b0c11e1fcd954969a245b474e6e9475116"
   }
 }

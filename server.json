@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/coinmarketcap",
   "title": "Coinmarketcap",
   "description": "CoinMarketCap MCP — crypto prices, market cap, rankings",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "websiteUrl": "https://pipeworx.io/packs/coinmarketcap",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-coinmarketcap",
