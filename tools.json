@@ -1,0 +1,113 @@
+[
+  {
+    "name": "quotes",
+    "description": "Latest market quotes for one or more cryptocurrencies. Identify by symbol (e.g. \"BTC,ETH\") OR by id (CMC numeric IDs).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "symbol": {
+          "type": "string",
+          "description": "Comma-separated tickers (e.g. \"BTC,ETH,SOL\")"
+        },
+        "id": {
+          "type": "string",
+          "description": "Comma-separated CMC IDs"
+        },
+        "convert": {
+          "type": "string",
+          "description": "Target currency (default USD)"
+        }
+      }
+    }
+  },
+  {
+    "name": "listings_latest",
+    "description": "Paginated list of cryptocurrencies ranked by market cap (or volume/price-change); returns rank, price, market cap, 24h volume, and 24h change per coin. Sortable; up to 5000 results.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "number",
+          "description": "1-based rank offset (default 1)"
+        },
+        "limit": {
+          "type": "number",
+          "description": "1-5000 (default 20)"
+        },
+        "sort": {
+          "type": "string",
+          "description": "market_cap | volume_24h | percent_change_24h | name | symbol"
+        },
+        "convert": {
+          "type": "string",
+          "description": "Quote currency (default USD)"
+        }
+      }
+    }
+  },
+  {
+    "name": "metadata",
+    "description": "Static coin metadata — logo, description, website, social links.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "symbol": {
+          "type": "string",
+          "description": "Comma-separated tickers"
+        },
+        "id": {
+          "type": "string",
+          "description": "Comma-separated CMC IDs"
+        }
+      }
+    }
+  },
+  {
+    "name": "global_metrics",
+    "description": "Total market cap, 24h volume, BTC/ETH dominance, active cryptos.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "convert": {
+          "type": "string",
+          "description": "Default USD"
+        }
+      }
+    }
+  },
+  {
+    "name": "categories",
+    "description": "List meta-categories (DeFi, L1, NFTs, Memes, …).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "number"
+        },
+        "limit": {
+          "type": "number",
+          "description": "1-5000 (default 100)"
+        }
+      }
+    }
+  },
+  {
+    "name": "category",
+    "description": "Fetch all coins belonging to a CoinMarketCap category (e.g. DeFi, NFTs) by category id (obtain ids from the `categories` tool); returns price, market cap, and 24h change per coin.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Category id (from `categories`)"
+        },
+        "convert": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  }
+]
