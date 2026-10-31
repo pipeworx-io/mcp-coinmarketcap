@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-coinmarketcap",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "CoinMarketCap MCP — crypto prices, market cap, rankings",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "coinmarketcap",
     "gatewaySlug": "coinmarketcap",
-    "sourceHash": "v1-532b259addd0c2ab16d3702b57c2b8cebe2456ac07670bd42dc1fc95a131a3c2",
-    "sourceCommit": "4277282d72f9bf55e548b3799aaf737baf22152f"
+    "sourceHash": "v1-f4aecf99ecfde03357b2da5218af4cb683708dfa6fac5c91802a851d342c7e69",
+    "sourceCommit": "8cc978183948532674e797c429305c9d8ab2a1c3"
   }
 }
